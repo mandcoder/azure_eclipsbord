@@ -56,22 +56,6 @@ The frontend and backend are connected purely through the `BACKEND_URL` environm
 └── pyproject.toml          # uv workspace root
 ```
 
-## Running locally
-
-```bash
-uv sync
-cd backend && uv run uvicorn api:app --reload   # in one terminal
-cd frontend && uv run streamlit run dashboard.py # in another
-```
-
-## Running with Docker
-
-```bash
-docker compose build
-docker compose up
-```
-
-Builds must target `linux/amd64` for Azure deployment (set via `platform: linux/amd64` in `docker-compose.yaml`) even when building on Apple Silicon.
 
 ## Azure deployment
 
